@@ -11,7 +11,7 @@ Este proyecto es una página web diseñada para la **Cooperativa Multisectorial 
 
 ## Estructura del proyecto
 
-El proyecto está organizado de la siguiente manera:
+```El proyecto está organizado de la siguiente manera:
 ├── app/ │
 ├── globals.css # Estilos globales 
 │ ├── layout.jsx # Diseño principal de la aplicación 
@@ -46,10 +46,10 @@ El proyecto está organizado de la siguiente manera:
    cd cooperativa-landing
 
 2.  Instala las dependencias:
-    pnpm install
+    ```pnpm install
 
 3.   Inicia el servidor de desarrollo:
-        pnpm dev
+        ```pnpm dev
 
 4. Abre la aplicación en tu navegador en http://localhost:3000.
 
