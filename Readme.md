@@ -11,7 +11,9 @@ Este proyecto es una página web diseñada para la **Cooperativa Multisectorial 
 
 ## Estructura del proyecto
 
-```El proyecto está organizado de la siguiente manera:
+
+El proyecto está organizado de la siguiente manera:
+```
 ├── app/ │
 ├── globals.css # Estilos globales 
 │ ├── layout.jsx # Diseño principal de la aplicación 
@@ -27,7 +29,8 @@ Este proyecto es una página web diseñada para la **Cooperativa Multisectorial 
 ├── lib/ │ └── utils.js # Utilidades generales 
 ├── public/ # Archivos públicos como imágenes y fuentes ├── styles/ # Archivos de estilos adicionales 
 ├── tailwind.config.js # Configuración de Tailwind CSS ├── tsconfig.json # Configuración de TypeScript 
-└── package.json # Dependencias y scripts del proyecto```
+└── package.json # Dependencias y scripts del proyecto
+```
 
 
 ## Tecnologías utilizadas
@@ -41,17 +44,25 @@ Este proyecto es una página web diseñada para la **Cooperativa Multisectorial 
 ## Instalación y configuración
 
 1. Clona este repositorio:
-   ```bash
+```bash
    git clone <URL_DEL_REPOSITORIO>
-   cd cooperativa-landing```
+   cd cooperativa-landing
+```
 
 2.  Instala las dependencias:
-    ```pnpm install```
+```bash
+pnpm install
+```
 
 3.   Inicia el servidor de desarrollo:
-        ```pnpm dev```
+```bash
+pnpm dev
+```
 
-4. Abre la aplicación en tu navegador en http://localhost:3000.
+4. Abre la aplicación en tu navegador en 
+```bash
+http://localhost:3000
+```
 
 Scripts disponibles
 pnpm dev: Inicia el servidor de desarrollo.
@@ -59,7 +70,8 @@ pnpm build: Construye la aplicación para producción.
 pnpm start: Inicia el servidor en modo producción.
 pnpm lint: Ejecuta el linter para verificar errores en el código.
 Contribuciones
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+
+## Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
 1. Haz un fork del repositorio.
 2. Crea una rama para tu funcionalidad o corrección de errores:
