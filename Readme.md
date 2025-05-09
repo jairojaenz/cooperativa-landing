@@ -27,7 +27,7 @@ Este proyecto es una página web diseñada para la **Cooperativa Multisectorial 
 ├── lib/ │ └── utils.js # Utilidades generales 
 ├── public/ # Archivos públicos como imágenes y fuentes ├── styles/ # Archivos de estilos adicionales 
 ├── tailwind.config.js # Configuración de Tailwind CSS ├── tsconfig.json # Configuración de TypeScript 
-└── package.json # Dependencias y scripts del proyecto
+└── package.json # Dependencias y scripts del proyecto```
 
 
 ## Tecnologías utilizadas
@@ -43,13 +43,13 @@ Este proyecto es una página web diseñada para la **Cooperativa Multisectorial 
 1. Clona este repositorio:
    ```bash
    git clone <URL_DEL_REPOSITORIO>
-   cd cooperativa-landing
+   cd cooperativa-landing```
 
 2.  Instala las dependencias:
-    ```pnpm install
+    ```pnpm install```
 
 3.   Inicia el servidor de desarrollo:
-        ```pnpm dev
+        ```pnpm dev```
 
 4. Abre la aplicación en tu navegador en http://localhost:3000.
 
@@ -74,4 +74,4 @@ git push origin feature/nueva-funcionalidad
 Contacto
 Para más información sobre la cooperativa, visita nuestra página oficial o contáctanos a través de nuestras redes sociales.
 
-Cooperativa Multisectorial Tierra Nuestra - Las Diosas R.L. ```
+Cooperativa Multisectorial Tierra Nuestra - Las Diosas R.L.
