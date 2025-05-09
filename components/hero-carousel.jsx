@@ -5,22 +5,48 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
+//importar imagenes de la carpeta src/images
+
+import produccion_jamaica from "@/src/images/Produccion_jamaica.webp"
+import apicultores from "@/src/images/Apicultores.webp"
+import GrupoApicultores from "@/src/images/GrupoApicultores.webp"
+import Produccion_miel from "@/src/images/Produccion_miel.webp"
+import Jamaica from "@/src/images/Jamaica.webp"
+import Fruto_Cafe from "@/src/images/Fruto_Cafe.webp"
+import procesando_jamaica from "@/src/images/Procesando_jamaica.webp"
+
+
 const images = [
   {
-    src: "https://www.el19digital.com/files/articulos/329998.jpg",
-    alt: "Mujeres trabajando en el campo",
+    //add image src of folder src/images of root the project and alt text
+
+    src: produccion_jamaica,
+    alt: "Producción de jamaica",
   },
   {
-    src: "https://www.el19digital.com/files/notas/source/2022/Junio/07Jun/esteli/COOPERATIVA_4.jpg",
+    src: apicultores,
+    alt: "Mujeres apicultoras en el campo",
     alt: "Productos orgánicos de la cooperativa",
   },
   {
-    src: "https://www.el19digital.com/files/notas/source/2022/Junio/07Jun/esteli/COOPERATIVA_2.jpg",
-    alt: "Cosecha de productos frescos",
+    src: GrupoApicultores,
+    alt: "Grupo de apicultores",
   },
   {
-    src: "https://www.el19digital.com/files/notas/source/2022/Junio/07Jun/esteli/COOPERATIVA_3.jpg",
-    alt: "Comunidad de mujeres agricultoras",
+    src: Produccion_miel,
+    alt: "Producción de miel",
+  },
+  {
+    src: Jamaica,
+    alt: "Producción de jamaica",
+  },
+  {
+    src: Fruto_Cafe,
+    alt: "Fruto de café",
+  },
+  {
+    src: procesando_jamaica,
+    alt: "Procesando jamaica",
   },
 ]
 
@@ -69,13 +95,13 @@ export default function HeroCarousel() {
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
       {/* Overlay gradient for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background/30 z-10 
+      <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background/0 z-10 
       absolute top-0 left-0 w-full flex justify-center py-6">
-      <h1 className= "text-4xl font-bold sm:text-3xl md:text-4xl text-primary">Cooperativa Multisectorial Tierra Nuestra</h1>
+      <h1 className= "text-lg font-bold sm:text-3xl md:text-4xl text-primary">Cooperativa Multisectorial Tierra Nuestra</h1>
       </div>
       <div className="absolute inset-0   z-10
       absolute top-20 left-0 w-full flex justify-center py-10">
-      <h2 className= "text-4xl font-bold sm:text-2xl md:text-3xl text-primary">Las Diosas R,L</h2>
+      <h2 className= "text-lg font-bold sm:text-3xl md:text-4xl text-primary">Las Diosas R,L</h2>
       </div>
 
 
@@ -85,7 +111,7 @@ export default function HeroCarousel() {
           <div
             key={index}
             className={cn(
-              "absolute inset-0 transition-opacity duration-1000",
+              "absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-60",
               index === currentIndex ? "opacity-100" : "opacity-0",
             )}
           >

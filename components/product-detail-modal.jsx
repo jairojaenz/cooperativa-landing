@@ -55,9 +55,9 @@ export function ProductDetailModal({ product, open, onOpenChange }) {
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-primary flex items-center gap-2">
             {product.name}
-            <span className="ml-auto text-base font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">
+            {/*<span className="ml-auto text-base font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">
               {product.price}
-            </span>
+            </span>*/}
           </DialogTitle>
           <DialogDescription className="text-base text-muted-foreground">
             Información detallada del producto
@@ -542,9 +542,9 @@ export default function LandingPage() {
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
                     />
-                    <div className="absolute top-3 right-3 bg-primary text-white px-3 py-1 rounded-full font-bold">
+                    {/*<div className="absolute top-3 right-3 bg-primary text-white px-3 py-1 rounded-full font-bold">
                       {product.price}
-                    </div>
+                    </div>*/}
                   </div>
                   <div className="p-4">
                     <h3 className="text-xl font-bold text-primary">{product.name}</h3>
