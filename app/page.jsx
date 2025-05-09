@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import HeroCarousel from "@/components/hero-carousel"
 import { ThemeSwitch } from "@/components/theme-switch"
 import { ProductDetailModal, ProductDetails } from "@/components/product-detail-modal"
-
+import Socias_cooperativa from "@/src/images/Socias_cooperativa.webp"
 // Datos de productos
 const products = [
   {
@@ -245,8 +245,8 @@ export default function LandingPage() {
         <div className="container flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <Leaf className="h-6 w-6 text-primary" />
-            <span className="text-2xl font-bold text-primary">CM</span>
-            <span className="text-2xl font-bold">Tierra Nuestra</span>
+            <span className="text-2xl font-bold text-primary">COMTINUE</span>
+            
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#inicio" className="text-sm font-medium hover:text-primary transition-colors">
@@ -298,15 +298,23 @@ export default function LandingPage() {
 
       <main className="flex-1">
         {/* Sección Hero */}
-        <section id="inicio" className="relative overflow-hidden">
+        <section id="inicio" className="relative overflow-hidden container:py-12 md:py-24 lg:py-32">
           {/* Elementos decorativos de fondo */}
-          <div className="absolute -top-24 -left-24 w-[600px] h-[600px] rounded-full bg-primary/10 blur-3xl opacity-70 -z-10"></div>
-          <div className="absolute top-20 -right-32 w-[500px] h-[500px] rounded-full bg-secondary/20 blur-3xl opacity-60 -z-10"></div>
-          <div className="absolute -bottom-40 left-1/4 w-[400px] h-[400px] rounded-full bg-primary/5 blur-3xl opacity-50 -z-10"></div>
+          <div className="absolute -top-80 -left-32 w-[600px] h-[600px] rounded-full bg-primary/90 blur-xl opacity-20 -z-10 animate-move-diagonal"></div>
+          <div className="absolute top-40 -right-32 w-[600px] h-[600px] rounded-full bg-secondary/90 blur-xl opacity-20 -z-10 animate-move-vertical"></div>
+          <div className="absolute -bottom-35 left-1/4 w-[800px] h-[800px] rounded-full bg-accent/90 blur-lg opacity-30 -z-10 animate-move-diagonal"></div>
+
+          <div className="absolute top-30 -right-10 w-[100px] h-[100px] rounded-full bg-primary/90 blur-xl opacity-50 -z-10 animate-move-vertical"></div>
+          <div className="absolute top-80 left-0 w-[100px] h-[100px] rounded-full bg-secondary/90 blur-xl opacity-50 -z-10 animate-move-vertical"></div>
+          <div className="absolute -bottom-35 left-1/2 w-[100px] h-[100px] rounded-full bg-secondary/90 blur-xl opacity-50 -z-10 animate-move-diagonal"></div>
+
+          <div className="absolute top-50 -right-90 w-[64px] h-[64px] rounded-full bg-primary/90 blur-xl opacity-30 -z-10 animate-move-diagonal"></div>
+          <div className="absolute top-10 left-80 w-[64px] h-[64px] rounded-full bg-secondary/90 blur-xl opacity-30 -z-10 animate-move-diagonal"></div>
+          <div className="absolute -bottom-65 left-1/6 w-[64px] h-[64px] rounded-full bg-accent/90 blur-xl opacity-30 -z-10 animate-move-diagonal"></div>
 
           <div className="container flex flex-col items-center gap-4 py-12 text-center md:py-24 relative z-10">
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+              <h1 className="text-xl font-bold tracking-tighter sm:text-3xl md:text-6xl">
                 Productos del campo <span className="text-primary">cultivados por mujeres</span>
               </h1>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
@@ -382,7 +390,7 @@ export default function LandingPage() {
             </div>
             <div className="relative h-[300px] overflow-hidden rounded-lg md:h-auto">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mujeresTrabajadoras-HLQ3AA9dAfilvjEsDqzF7O69csXDc7.png"
+                src={Socias_cooperativa}
                 alt="Mujeres trabajadoras de la cooperativa mostrando sus productos frescos"
                 fill
                 className="object-cover"
@@ -416,9 +424,9 @@ export default function LandingPage() {
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
                     />
-                    <div className="absolute top-3 right-3 bg-primary text-white px-3 py-1 rounded-full font-bold">
+                    {/*<div className="absolute top-3 right-3 bg-primary text-white px-3 py-1 rounded-full font-bold">
                       {product.price}
-                    </div>
+                    </div>*/}
                   </div>
                   <div className="p-4">
                     <h3 className="text-xl font-bold text-primary">{product.name}</h3>
@@ -451,7 +459,7 @@ export default function LandingPage() {
                           className="object-cover transition-transform group-hover:scale-105"
                         />
                         <div className="absolute top-3 right-3 bg-primary text-white px-3 py-1 rounded-full font-bold">
-                          {product.price}
+                          {/*product.price*/}
                         </div>
                       </div>
                       <div className="p-4">
@@ -482,7 +490,7 @@ export default function LandingPage() {
                           className="object-cover transition-transform group-hover:scale-105"
                         />
                         <div className="absolute top-3 right-3 bg-primary text-white px-3 py-1 rounded-full font-bold">
-                          {product.price}
+                          {/*product.price*/}
                         </div>
                       </div>
                       <div className="p-4">
