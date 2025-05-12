@@ -849,8 +849,8 @@ export default function LandingPage() {
        <VideoSection
         title="Proceso de producción de la Rosa de Jamaica"
         description="Un recorrido visual por el proceso de produccion de la rosa de jamaica, en manos de mujeres organizadas en cooperativa."
-        srcWebm="/video/Produccion_jamaica.webm"
-        poster = "/video/Produccion_miel.webp"
+        srcWebm="/video/Produccion_miel.webm"
+        poster = "/video/Rosa de jamaica poster.webp"
       />
 
         {/* Sección Contacto */}
