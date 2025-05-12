@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { ChevronRight, ChevronUp, Leaf, MapPin, MessageSquare, ShoppingBag, Users } from "lucide-react"
+import VideoSection from "@/components/VideoSection";
 
 import { Button } from "@/components/ui/button"
 import HeroCarousel from "@/components/hero-carousel"
@@ -245,7 +246,7 @@ export default function LandingPage() {
         <div className="container flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <Leaf className="h-6 w-6 text-primary" />
-            <span className="text-2xl font-bold text-primary">COMTINUE</span>
+            <span className="text-2xl font-bold text-primary hover:text-primary/60 transition-colors">COMTINUE</span>
             
           </div>
           <nav className="hidden md:flex items-center gap-6">
@@ -388,7 +389,7 @@ export default function LandingPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative h-[300px] overflow-hidden rounded-lg md:h-auto">
+            <div className="relative h-[300px] overflow-hidden rounded-lg md:h-auto hover:scale-105 transition-transform cursor-crosshair">
               <Image
                 src={Socias_cooperativa}
                 alt="Mujeres trabajadoras de la cooperativa mostrando sus productos frescos"
@@ -408,9 +409,7 @@ export default function LandingPage() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestros Productos</h2>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                 Descubre la variedad de productos cultivados con amor y dedicación por nuestras mujeres trabajadoras.
-                <span className="block mt-2 text-sm font-medium text-primary">
-                  *Precios informativos, sujetos a cambios según temporada y disponibilidad
-                </span>
+            
               </p>
             </div>
 
@@ -839,6 +838,20 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/* Sección de procesos de producción */}
+        <VideoSection
+        title="Proceso de producción Artesanal de la miel de abeja"
+        description="Un recorrido visual por el proceso de produccion de la miel, en manos de mujeres organizadas en cooperativa."
+        srcWebm="/video/Produccion_miel.webm"
+        poster = "/video/miel_de abeja_poster.png"
+      />
+       <VideoSection
+        title="Proceso de producción de la Rosa de Jamaica"
+        description="Un recorrido visual por el proceso de produccion de la rosa de jamaica, en manos de mujeres organizadas en cooperativa."
+        srcWebm="/video/Produccion_jamaica.webm"
+        poster = "/video/Produccion_miel.webp"
+      />
 
         {/* Sección Contacto */}
         <section id="contacto" className="py-12 md:py-24">
