@@ -1,5 +1,6 @@
 "use client"
 
+
 import { useState } from "react"
 import Image from "next/image"
 import { ChevronRight, ChevronUp, Leaf, MapPin, MessageSquare, ShoppingBag, Users } from "lucide-react"
@@ -265,6 +266,9 @@ export default function LandingPage() {
             <a href="#certificaciones" className="text-sm font-medium hover:text-primary transition-colors">
               Certificaciones
             </a>
+            <a href="#mision-vision-valores" className="text-sm font-medium hover:text-primary transition-colors">
+              Misión & Visión
+            </a>
             <a href="#contacto" className="text-sm font-medium hover:text-primary transition-colors">
               Contacto
             </a>
@@ -298,7 +302,8 @@ export default function LandingPage() {
       </header>
 
       <main className="flex-1">
-        {/* Sección Hero */}
+        <HeroCarousel />
+        {/* Sección TODO */}
         <section id="inicio" className="relative overflow-hidden container:py-12 md:py-24 lg:py-32">
           {/* Elementos decorativos de fondo */}
           <div className="absolute -top-80 -left-32 w-[600px] h-[600px] rounded-full bg-primary/90 blur-xl opacity-20 -z-10 animate-move-diagonal"></div>
@@ -315,13 +320,8 @@ export default function LandingPage() {
 
           <div className="container flex flex-col items-center gap-4 py-12 text-center md:py-24 relative z-10">
             <div className="space-y-4">
-              <h1 className="text-xl font-bold tracking-tighter sm:text-3xl md:text-6xl">
-                Productos del campo <span className="text-primary">cultivados por mujeres</span>
-              </h1>
-              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Apoya a nuestra cooperativa de mujeres trabajadoras del campo y disfruta de productos orgánicos, frescos
-                y de alta calidad.
-              </p>
+              <h1 className= "text-sm font-bold  md:text-md xl:text-xl text-primary px-3">Cooperativa Multisectorial Tierra Nuestra</h1>
+              <h2 className= "text-sm font-bold  md:text-md xl:text-xl text-primary">Las Diosas R,L</h2>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button
@@ -344,7 +344,6 @@ export default function LandingPage() {
               </Button>
             </div>
           </div>
-          <HeroCarousel />
         </section>
 
         {/* Sección Nosotras */}
@@ -399,6 +398,74 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+{/************************************************************ */}
+
+{/* Sección Misión, Visión y Valores */}
+       <section id="mision-vision-valores" className="relative overflow-hidden container:py-12 md:py-24 lg:py-32">
+          {/* Elementos decorativos de fondo */}
+          <div className="absolute -top-80 -left-32 w-[600px] h-[600px] rounded-full bg-primary/90 blur-xl opacity-20 -z-10 animate-move-diagonal"></div>
+          <div className="absolute top-40 -right-32 w-[600px] h-[600px] rounded-full bg-secondary/90 blur-xl opacity-20 -z-10 animate-move-vertical"></div>
+          <div className="absolute -bottom-35 left-1/4 w-[800px] h-[800px] rounded-full bg-accent/90 blur-lg opacity-30 -z-10 animate-move-diagonal"></div>
+
+          <div className="absolute top-30 -right-10 w-[100px] h-[100px] rounded-full bg-primary/90 blur-xl opacity-50 -z-10 animate-move-vertical"></div>
+          <div className="absolute top-80 left-0 w-[100px] h-[100px] rounded-full bg-secondary/90 blur-xl opacity-50 -z-10 animate-move-vertical"></div>
+          <div className="absolute -bottom-35 left-1/2 w-[100px] h-[100px] rounded-full bg-secondary/90 blur-xl opacity-50 -z-10 animate-move-diagonal"></div>
+
+          <div className="absolute top-50 -right-90 w-[64px] h-[64px] rounded-full bg-primary/90 blur-xl opacity-30 -z-10 animate-move-diagonal"></div>
+          <div className="absolute top-10 left-80 w-[64px] h-[64px] rounded-full bg-secondary/90 blur-xl opacity-30 -z-10 animate-move-diagonal"></div>
+          <div className="absolute -bottom-65 left-1/6 w-[64px] h-[64px] rounded-full bg-accent/90 blur-xl opacity-30 -z-10 animate-move-diagonal"></div>
+
+     <div className="container mx-auto px-4">
+    
+    <div className="flex flex-col items-center justify-center gap-10 md:flex-row">
+      {/* Mision */}
+      <div className="group w-full max-w-sm rounded-2xl border border-white/10 bg-white/30 backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300">
+        <div className="relative h-[200px] w-full">
+          <img
+            src="https://www.ienh.edu.co/wp-content/uploads/2023/04/MISION-PISANDO-FIRME.png"
+            alt="mision"
+            className="object-cover w-full h-full rounded-t-2xl transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div className="p-6 text-center">
+          <h3 className="text-xl font-bold text-primary">Misión</h3>
+          <p className="text-sm text-muted-foreground mt-2">
+            Infusión artesanal rica en sabor y tradición.
+            Endulzada por la naturaleza, cosechada con respeto.
+            Endulzada por la naturaleza, cosechada con respeto.
+          </p>
+        </div>
+      </div>
+
+      {/* Vision */}
+      <div className="group w-full max-w-sm rounded-2xl border border-white/10 bg-white/30 backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300">
+        <div className="relative h-[200px] w-full">
+          <img
+            src="https://lh5.googleusercontent.com/proxy/YmIaMVSVQRnQnayemD95NKqbF_LP1AuAdfjFzcYMjHne4PRjv677giKSZOs2eqCsxvGbXtlM1af4VxpZ-cNObOgcMkt_ylcICgXfc6n7N-pQCYOnXF50stpL"
+            alt="vison"
+            className="object-cover w-full h-full rounded-t-2xl transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div className="p-6 text-center">
+          <h3 className="text-xl font-bold text-primary">Visión</h3>
+          <p className="text-sm text-muted-foreground mt-2">
+            Endulzada por la naturaleza, cosechada con respeto.
+            Endulzada por la naturaleza, cosechada con respeto.
+            Endulzada por la naturaleza, cosechada con respeto.
+          </p>
+       
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </section>
+
+
+
+
+{/************************************************************ */}
 
         {/* Sección Productos */}
         <section id="productos" className="py-12 md:py-24 relative overflow-hidden">
@@ -533,69 +600,56 @@ export default function LandingPage() {
           <div className="container space-y-12">
             <div className="space-y-4 text-center">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Lo que dicen nuestros clientes
+                Voces que Florecen: Testimonios desde la Cooperativa
               </h2>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Testimonios de quienes han disfrutado de nuestros productos y apoyado nuestra causa.
+                Ellas nos cuentan cómo, unidas en la cooperativa, han hecho florecer no solo la tierra, sino también sus vidas.
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {/* Testimonio 1 */}
-              <div className="rounded-lg border bg-background p-6">
-                <div className="flex items-start gap-4">
-                  <div className="relative h-10 w-10 rounded-full bg-primary/10">
-                    <span className="absolute inset-0 flex items-center justify-center text-lg font-bold text-primary">
-                      M
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold">María González</h3>
-                    <p className="text-sm text-muted-foreground">Cliente frecuente</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-muted-foreground">
-                  "Los productos de la cooperativa son excepcionales. Puedo sentir el amor y dedicación en cada fruta y
-                  verdura que compro."
-                </p>
-              </div>
+         <div class="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
+  <img 
+    src="/foto/1.webp" alt="Gisell Valle" 
+    class="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
+  />
+  <div class="absolute inset-0 flex items-end justify-center text-white p-6">
+    <div class="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <h2 class="text-xl font-semibold mb-2">Quidian Valle</h2>
+      <p class="text-center text-sm">Cada flor de rosa de Jamaica que cosechamos representa nuestro esfuerzo y esperanza.</p>
+    </div>
+  </div>
+</div>
 
               {/* Testimonio 2 */}
-              <div className="rounded-lg border bg-background p-6">
-                <div className="flex items-start gap-4">
-                  <div className="relative h-10 w-10 rounded-full bg-primary/10">
-                    <span className="absolute inset-0 flex items-center justify-center text-lg font-bold text-primary">
-                      J
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Juan Pérez</h3>
-                    <p className="text-sm text-muted-foreground">Chef local</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-muted-foreground">
-                  "Como chef, valoro la calidad y frescura de los productos. La cooperativa me proporciona los mejores
-                  ingredientes para mis platos."
-                </p>
-              </div>
+ <div class="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
+  <img 
+    src="/foto/1.webp" alt="Susana Rivas" 
+    class="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
+  />
+  <div class="absolute inset-0 flex items-end justify-center text-white p-6">
+    <div class="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <h2 class="text-xl font-semibold mb-2">Susana Rivas</h2>
+      <p class="text-center text-sm">Antes trabajaba la tierra sola pero con el apoyo de la cooperativa, he aprendido a cuidar mejor mis cultivos.</p>
+    </div>
+  </div>
+</div>
 
               {/* Testimonio 3 */}
-              <div className="rounded-lg border bg-background p-6">
-                <div className="flex items-start gap-4">
-                  <div className="relative h-10 w-10 rounded-full bg-primary/10">
-                    <span className="absolute inset-0 flex items-center justify-center text-lg font-bold text-primary">
-                      L
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Laura Ramírez</h3>
-                    <p className="text-sm text-muted-foreground">Tienda orgánica</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-muted-foreground">
-                  "Mis clientes siempre preguntan por los productos de la cooperativa. La calidad es consistente y el
-                  impacto social es invaluable."
-                </p>
-              </div>
+           <div class="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
+  <img 
+    src="/foto/1.webp" 
+    alt="Gisell Valle" 
+    class="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
+  />
+  <div class="absolute inset-0 flex items-end justify-center text-white p-6">
+    <div class="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <h2 class="text-xl font-semibold mb-2">Gisell Valle</h2>
+      <p class="text-center text-sm">Ser apicultora me enseñó a respetar la naturaleza y a trabajar en equipo, justas construimos un futuro mejor para nuestras familias.</p>
+    </div>
+  </div>
+</div>
+
             </div>
           </div>
         </section>
@@ -844,13 +898,13 @@ export default function LandingPage() {
         title="Proceso de producción Artesanal de la miel de abeja"
         description="Un recorrido visual por el proceso de produccion de la miel, en manos de mujeres organizadas en cooperativa."
         srcWebm="/video/Produccion_miel.webm"
-        poster = "/video/miel_de abeja_poster.png"
+        poster = "/video/proceso_miel.webp"
       />
        <VideoSection
         title="Proceso de producción de la Rosa de Jamaica"
         description="Un recorrido visual por el proceso de produccion de la rosa de jamaica, en manos de mujeres organizadas en cooperativa."
         srcWebm="/video/Produccion_miel.webm"
-        poster = "/video/Rosa de jamaica poster.webp"
+        poster = "/foto/poster_rosa_jamaica.webp"
       />
 
         {/* Sección Contacto */}
@@ -1052,6 +1106,9 @@ export default function LandingPage() {
             </a>
             <a href="#certificaciones" className="text-sm font-medium hover:text-primary transition-colors">
               Certificaciones
+            </a>
+            <a href="#mision-vision-valores" className="text-sm font-medium hover:text-primary transition-colors">
+              Misión & Visión
             </a>
             <a href="#contacto" className="text-sm font-medium hover:text-primary transition-colors">
               Contacto

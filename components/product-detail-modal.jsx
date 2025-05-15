@@ -128,14 +128,13 @@ export function ProductDetailModal({ product, open, onOpenChange }) {
             <Button variant="outline" onClick={() => onOpenChange(false)}>
               Cerrar
             </Button>
-            <Button>Contactar para pedido</Button>
           </div>
         </div>
       </DialogContent>
     </Dialog>
   )
 }
-
+// <Button>Contactar para pedido</Button>
 // Datos de productos
 const products = [
   {
@@ -390,6 +389,7 @@ export default function LandingPage() {
             <a href="#certificaciones" className="text-sm font-medium hover:text-primary transition-colors">
               Certificaciones
             </a>
+            
             <a href="#contacto" className="text-sm font-medium hover:text-primary transition-colors">
               Contacto
             </a>
@@ -646,79 +646,7 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-
-        {/* Sección Testimonios */}
-        <section id="testimonios" className="bg-muted/50 py-12 md:py-24">
-          <div className="container space-y-12">
-            <div className="space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Lo que dicen nuestros clientes
-              </h2>
-              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Testimonios de quienes han disfrutado de nuestros productos y apoyado nuestra causa.
-              </p>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {/* Testimonio 1 */}
-              <div className="rounded-lg border bg-background p-6">
-                <div className="flex items-start gap-4">
-                  <div className="relative h-10 w-10 rounded-full bg-primary/10">
-                    <span className="absolute inset-0 flex items-center justify-center text-lg font-bold text-primary">
-                      M
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold">María González</h3>
-                    <p className="text-sm text-muted-foreground">Cliente frecuente</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-muted-foreground">
-                  "Los productos de la cooperativa son excepcionales. Puedo sentir el amor y dedicación en cada fruta y
-                  verdura que compro."
-                </p>
-              </div>
-
-              {/* Testimonio 2 */}
-              <div className="rounded-lg border bg-background p-6">
-                <div className="flex items-start gap-4">
-                  <div className="relative h-10 w-10 rounded-full bg-primary/10">
-                    <span className="absolute inset-0 flex items-center justify-center text-lg font-bold text-primary">
-                      J
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Juan Pérez</h3>
-                    <p className="text-sm text-muted-foreground">Chef local</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-muted-foreground">
-                  "Como chef, valoro la calidad y frescura de los productos. La cooperativa me proporciona los mejores
-                  ingredientes para mis platos."
-                </p>
-              </div>
-
-              {/* Testimonio 3 */}
-              <div className="rounded-lg border bg-background p-6">
-                <div className="flex items-start gap-4">
-                  <div className="relative h-10 w-10 rounded-full bg-primary/10">
-                    <span className="absolute inset-0 flex items-center justify-center text-lg font-bold text-primary">
-                      L
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold">Laura Ramírez</h3>
-                    <p className="text-sm text-muted-foreground">Tienda orgánica</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-muted-foreground">
-                  "Mis clientes siempre preguntan por los productos de la cooperativa. La calidad es consistente y el
-                  impacto social es invaluable."
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+         
         {/* Nueva Sección de Certificaciones y Exportaciones */}
         <section id="certificaciones" className="py-12 md:py-24 relative overflow-hidden">
           <div className="absolute -left-20 top-1/3 w-[350px] h-[350px] rounded-full bg-primary/10 blur-3xl opacity-40 -z-10"></div>
@@ -1158,6 +1086,7 @@ export default function LandingPage() {
             <a href="#certificaciones" className="text-sm font-medium hover:text-primary transition-colors">
               Certificaciones
             </a>
+            
             <a href="#contacto" className="text-sm font-medium hover:text-primary transition-colors">
               Contacto
             </a>

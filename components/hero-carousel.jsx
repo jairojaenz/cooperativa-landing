@@ -85,28 +85,31 @@ export default function HeroCarousel() {
   const handleInteraction = () => {
     setIsAutoPlaying(false)
     // Resume autoplay after 5 seconds of inactivity
-    setTimeout(() => setIsAutoPlaying(true), 5000)
+    setTimeout(() => setIsAutoPlaying(true), 2000)
   }
 
   return (
     <div
-      className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden"
+      className="relative w-full h-[700px]  overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
       {/* Overlay gradient for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/90 to-background/0 z-10 
-      absolute top-0 left-0 w-full flex justify-center py-6">
-      <h1 className= "text-lg font-bold sm:text-3xl md:text-4xl text-primary">Cooperativa Multisectorial Tierra Nuestra</h1>
-      </div>
-      <div className="absolute inset-0   z-10
-      absolute top-20 left-0 w-full flex justify-center py-10">
-      <h2 className= "text-lg font-bold sm:text-3xl md:text-4xl text-primary">Las Diosas R,L</h2>
-      </div>
+     
 
 
       {/* Carousel images */}
       <div className="relative h-full w-full">
+     <div className="absolute top-2/4 left-2/4 flex-col gap-4 z-10 w-full flex justify-center px-6 text-center transform -translate-x-2/4 -translate-y-2/4">
+
+      <h1 className="text-4xl font-bold tracking-tighter lg:text-6xl">
+                Productos del campo <span className="text-primary">cultivados por mujeres</span>
+      </h1>
+               <h2 className="text-shadow-lg/30 text-lg">
+                Apoya a nuestra cooperativa de mujeres trabajadoras del campo y disfruta de productos orgánicos, frescos
+                y de alta calidad.
+              </h2>
+      </div>
         {images.map((image, index) => (
           <div
             key={index}
