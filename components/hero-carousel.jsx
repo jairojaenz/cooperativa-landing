@@ -12,7 +12,7 @@ import apicultores from "@/src/images/Apicultores.webp"
 import GrupoApicultores from "@/src/images/GrupoApicultores.webp"
 import Produccion_miel from "@/src/images/Produccion_miel.webp"
 import Jamaica from "@/src/images/Jamaica.webp"
-import Fruto_Cafe from "@/src/images/Fruto_Cafe.webp"
+import Fruto_Cafe from "@/src/images/Fruto_cafe.webp"
 import procesando_jamaica from "@/src/images/Procesando_jamaica.webp"
 
 

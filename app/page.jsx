@@ -608,44 +608,44 @@ export default function LandingPage() {
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {/* Testimonio 1 */}
-         <div class="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
+         <div className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
   <img 
     src="/foto/1.webp" alt="Gisell Valle" 
-    class="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
+    className="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
   />
-  <div class="absolute inset-0 flex items-end justify-center text-white p-6">
-    <div class="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-      <h2 class="text-xl font-semibold mb-2">Quidian Valle</h2>
-      <p class="text-center text-sm">Cada flor de rosa de Jamaica que cosechamos representa nuestro esfuerzo y esperanza.</p>
+  <div className="absolute inset-0 flex items-end justify-center text-white p-6">
+    <div className="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <h2 className="text-xl font-semibold mb-2">Quidian Valle</h2>
+      <p className="text-center text-sm">Cada flor de rosa de Jamaica que cosechamos representa nuestro esfuerzo y esperanza.</p>
     </div>
   </div>
 </div>
 
               {/* Testimonio 2 */}
- <div class="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
+ <div className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
   <img 
     src="/foto/1.webp" alt="Susana Rivas" 
-    class="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
+    className="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
   />
-  <div class="absolute inset-0 flex items-end justify-center text-white p-6">
-    <div class="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-      <h2 class="text-xl font-semibold mb-2">Susana Rivas</h2>
-      <p class="text-center text-sm">Antes trabajaba la tierra sola pero con el apoyo de la cooperativa, he aprendido a cuidar mejor mis cultivos.</p>
+  <div className="absolute inset-0 flex items-end justify-center text-white p-6">
+    <div className="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <h2 className="text-xl font-semibold mb-2">Susana Rivas</h2>
+      <p className="text-center text-sm">Antes trabajaba la tierra sola pero con el apoyo de la cooperativa, he aprendido a cuidar mejor mis cultivos.</p>
     </div>
   </div>
 </div>
 
               {/* Testimonio 3 */}
-           <div class="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
+           <div className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
   <img 
     src="/foto/1.webp" 
     alt="Gisell Valle" 
-    class="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
+    className="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
   />
-  <div class="absolute inset-0 flex items-end justify-center text-white p-6">
-    <div class="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-      <h2 class="text-xl font-semibold mb-2">Gisell Valle</h2>
-      <p class="text-center text-sm">Ser apicultora me enseñó a respetar la naturaleza y a trabajar en equipo, justas construimos un futuro mejor para nuestras familias.</p>
+  <div className="absolute inset-0 flex items-end justify-center text-white p-6">
+    <div className="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+      <h2 className="text-xl font-semibold mb-2">Gisell Valle</h2>
+      <p className="text-center text-sm">Ser apicultora me enseñó a respetar la naturaleza y a trabajar en equipo, justas construimos un futuro mejor para nuestras familias.</p>
     </div>
   </div>
 </div>
