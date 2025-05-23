@@ -94,18 +94,20 @@ export default function HeroCarousel() {
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
-      {/* Overlay gradient for better text readability */}
      
-
-
       {/* Carousel images */}
       <div className="relative h-full w-full">
      <div className="absolute top-2/4 left-2/4 flex-col gap-4 z-10 w-full flex justify-center px-6 text-center transform -translate-x-2/4 -translate-y-2/4">
 
-      <h1 className="text-4xl font-bold tracking-tighter lg:text-6xl">
-                Productos del campo <span className="text-primary">cultivados por mujeres</span>
+     <h1
+  className="text-4xl font-bold tracking-tighter lg:text-6xl"
+  style={{ textShadow: "12 16px 42px rgba(0,0,0,0.9)" }}
+>
+  Productos del campo <span className="text-primary"
+  >cultivados por mujeres</span>
       </h1>
-               <h2 className="text-shadow-lg/30 text-lg">
+               <h2 className="text-shadow-lg/30 text-lg font-bold"
+               style={{ textShadow: "12 8px 32px rgba(0,0,0,0.9)" }}>
                 Apoya a nuestra cooperativa de mujeres trabajadoras del campo y disfruta de productos orgánicos, frescos
                 y de alta calidad.
               </h2>
@@ -114,7 +116,7 @@ export default function HeroCarousel() {
           <div
             key={index}
             className={cn(
-              "absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-60",
+              "absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-90",
               index === currentIndex ? "opacity-100" : "opacity-0",
             )}
           >
