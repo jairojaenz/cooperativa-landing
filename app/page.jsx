@@ -1,10 +1,14 @@
 "use client"
 
-
 import { useState } from "react"
 import Image from "next/image"
 import { ChevronRight, ChevronUp, Leaf, MapPin, MessageSquare, ShoppingBag, Users } from "lucide-react"
 import VideoSection from "@/components/VideoSection";
+import dynamic from "next/dynamic";
+
+const MapaCooperativa = dynamic(() => import("@/components/mapa-cooperativa"), {
+  ssr: false,
+});
 
 import { Button } from "@/components/ui/button"
 import HeroCarousel from "@/components/hero-carousel"
@@ -239,14 +243,14 @@ export default function LandingPage() {
     setSelectedProduct(product)
     setIsModalOpen(true)
   }
-
+ 
   return (
     <div className="flex min-h-screen flex-col">
       {/* Barra de navegación */}
       <header className="sticky top-0 z-40 border-b bg-background">
         <div className="container flex h-16 items-center justify-between py-4">
           <div className="flex items-center gap-2">
-            <Leaf className="h-6 w-6 text-primary" />
+            <img src="/foto/logo_continue.ico" alt="Icono COMTINUE" className="h-6 w-6 rounded-lg" />
             <span className="text-2xl font-bold text-primary hover:text-primary/60 transition-colors">COMTINUE</span>
             
           </div>
@@ -268,6 +272,9 @@ export default function LandingPage() {
             </a>
             <a href="#mision-vision-valores" className="text-sm font-medium hover:text-primary transition-colors">
               Misión & Visión
+            </a>
+            <a href="#mapa" className="text-sm font-medium hover:text-primary transition-colors">
+              Mapa
             </a>
             <a href="#contacto" className="text-sm font-medium hover:text-primary transition-colors">
               Contacto
@@ -302,7 +309,8 @@ export default function LandingPage() {
       </header>
 
       <main className="flex-1">
-        <HeroCarousel />
+        <HeroCarousel/>
+        
         {/* Sección TODO */}
         <section id="inicio" className="relative overflow-hidden container:py-12 md:py-24 lg:py-32">
           {/* Elementos decorativos de fondo */}
@@ -347,61 +355,62 @@ export default function LandingPage() {
         </section>
 
         {/* Sección Nosotras */}
-        <section id="nosotras" className="bg-muted/50 py-12 md:py-24 relative overflow-hidden">
-          <div className="absolute -right-20 top-1/4 w-[300px] h-[300px] rounded-full bg-primary/5 blur-3xl opacity-50 -z-10"></div>
-          <div className="container grid gap-6 md:grid-cols-2 md:gap-12">
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
-                Nuestra Historia
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Una cooperativa con propósito
-              </h2>
-              <p className="text-muted-foreground md:text-xl">
-                Somos un grupo de mujeres trabajadoras del campo unidas por la pasión de cultivar productos de calidad
-                mientras generamos oportunidades para nuestras familias y comunidad.
-              </p>
-              <div className="flex gap-4">
-                <div className="flex flex-col">
-                  <span className="text-3xl font-bold">33+</span>
-                  <span className="text-muted-foreground">Mujeres</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-3xl font-bold">3+</span>
-                  <span className="text-muted-foreground">Años</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-3xl font-bold">100%</span>
-                  <span className="text-muted-foreground">Orgánico</span>
-                </div>
-              </div>
-              <div>
-                <Button
-                  variant="outline"
-                  className="mt-2"
-                  onClick={() => {
-                    document.getElementById("nosotras")?.scrollIntoView({ behavior: "smooth" })
-                  }}
-                >
-                  <Users className="mr-2 h-4 w-4" />
-                  Conoce a nuestras productoras
-                </Button>
-              </div>
-            </div>
-            <div className="relative h-[300px] overflow-hidden rounded-lg md:h-auto hover:scale-105 transition-transform cursor-crosshair">
-              <Image
-                src={Socias_cooperativa}
-                alt="Mujeres trabajadoras de la cooperativa mostrando sus productos frescos"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
+        <section id="nosotras" className="py-12 md:py-24 relative overflow-hidden section-bg section-text">
+  <div className="absolute -right-20 top-1/4 w-[300px] h-[300px] rounded-full blur-3xl opacity-50 -z-10" style={{backgroundColor: "hsl(var(--primary) / 0.05)"}}></div>
+  <div className="container grid gap-6 md:grid-cols-2 md:gap-12">
+    <div className="flex flex-col justify-center space-y-4">
+      <div className="inline-block rounded-lg px-3 py-1 text-sm section-primary-bg">
+        Nuestra Historia
+      </div>
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl section-title">
+        Una cooperativa con propósito
+      </h2>
+      <p className="md:text-xl">
+        Somos un grupo de mujeres trabajadoras del campo unidas por la pasión de cultivar productos de calidad
+        mientras generamos oportunidades para nuestras familias y comunidad.
+      </p>
+      <div className="flex gap-4">
+        <div className="flex flex-col">
+          <span className="text-3xl font-bold section-title">33+</span>
+          <span className="section-text">Mujeres</span>
+        </div>
+        <div className="flex flex-col">
+          <span className="text-3xl font-bold section-title">3+</span>
+          <span className="section-text">Años</span>
+        </div>
+        <div className="flex flex-col">
+          <span className="text-3xl font-bold section-title">100%</span>
+          <span className="section-text">Orgánico</span>
+        </div>
+      </div>
+      <div>
+        <Button
+          variant="outline"
+          className="mt-2"
+          onClick={() => {
+            document.getElementById("nosotras")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <Users className="mr-2 h-4 w-4" />
+          Conoce a nuestras productoras
+        </Button>
+      </div>
+    </div>
+    <div className="relative h-[300px] overflow-hidden rounded-lg md:h-auto hover:scale-105 transition-transform cursor-crosshair">
+      <Image
+        src={Socias_cooperativa}
+        alt="Mujeres trabajadoras de la cooperativa mostrando sus productos frescos"
+        fill
+        className="object-cover"
+      />
+    </div>
+  </div>
         </section>
-{/************************************************************ */}
 
-{/* Sección Misión, Visión y Valores */}
+
+       {/* Sección Misión, Visión y Valores */}
        <section id="mision-vision-valores" className="relative overflow-hidden container:py-12 md:py-24 lg:py-32">
+
           {/* Elementos decorativos de fondo */}
           <div className="absolute -top-80 -left-32 w-[600px] h-[600px] rounded-full bg-primary/90 blur-xl opacity-20 -z-10 animate-move-diagonal"></div>
           <div className="absolute top-40 -right-32 w-[600px] h-[600px] rounded-full bg-secondary/90 blur-xl opacity-20 -z-10 animate-move-vertical"></div>
@@ -414,58 +423,73 @@ export default function LandingPage() {
           <div className="absolute top-50 -right-90 w-[64px] h-[64px] rounded-full bg-primary/90 blur-xl opacity-30 -z-10 animate-move-diagonal"></div>
           <div className="absolute top-10 left-80 w-[64px] h-[64px] rounded-full bg-secondary/90 blur-xl opacity-30 -z-10 animate-move-diagonal"></div>
           <div className="absolute -bottom-65 left-1/6 w-[64px] h-[64px] rounded-full bg-accent/90 blur-xl opacity-30 -z-10 animate-move-diagonal"></div>
+         {/* Elementos decorativos de fondo */}
 
-     <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4">
     
-    <div className="flex flex-col items-center justify-center gap-10 md:flex-row">
-      {/* Mision */}
-      <div className="group w-full max-w-sm rounded-2xl border border-white/10 bg-white/30 backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300">
-        <div className="relative h-[200px] w-full">
-          <img
-            src="https://www.ienh.edu.co/wp-content/uploads/2023/04/MISION-PISANDO-FIRME.png"
-            alt="mision"
-            className="object-cover w-full h-full rounded-t-2xl transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-        <div className="p-6 text-center">
-          <h3 className="text-xl font-bold text-primary">Misión</h3>
-          <p className="text-sm text-muted-foreground mt-2">
-            Infusión artesanal rica en sabor y tradición.
-            Endulzada por la naturaleza, cosechada con respeto.
-            Endulzada por la naturaleza, cosechada con respeto.
+          <div className="flex flex-col items-center justify-center gap-10 md:flex-row">
+          <div className="grid gap-10 md:grid-cols-3">
+      {/* Misión */}
+      <div className="group rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full flex flex-col">
+        <img
+          src="https://www.ienh.edu.co/wp-content/uploads/2023/04/MISION-PISANDO-FIRME.png"
+          alt="Misión"
+          className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="p-6 text-center flex flex-col flex-1">
+          <h3 className="text-2xl font-semibold text-primary mb-2">Misión</h3>
+          <p className="text-sm text-muted-foreground text-justify flex-1">
+            Somos una cooperativa multisectorial de mujeres que impulsa el desarrollo
+            socioeconómico con enfoque agroecológico. Promovemos la autosostenibilidad,
+            la diversificación productiva y el empoderamiento organizativo, articulando
+            estrategias de comercialización nacional e internacional.
           </p>
         </div>
       </div>
 
-      {/* Vision */}
-      <div className="group w-full max-w-sm rounded-2xl border border-white/10 bg-white/30 backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-300">
-        <div className="relative h-[200px] w-full">
-          <img
-            src="https://lh5.googleusercontent.com/proxy/YmIaMVSVQRnQnayemD95NKqbF_LP1AuAdfjFzcYMjHne4PRjv677giKSZOs2eqCsxvGbXtlM1af4VxpZ-cNObOgcMkt_ylcICgXfc6n7N-pQCYOnXF50stpL"
-            alt="vison"
-            className="object-cover w-full h-full rounded-t-2xl transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-        <div className="p-6 text-center">
-          <h3 className="text-xl font-bold text-primary">Visión</h3>
-          <p className="text-sm text-muted-foreground mt-2">
-            Endulzada por la naturaleza, cosechada con respeto.
-            Endulzada por la naturaleza, cosechada con respeto.
-            Endulzada por la naturaleza, cosechada con respeto.
+      {/* Visión */}
+      <div className="group rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full flex flex-col">
+        <img
+          src="https://lh5.googleusercontent.com/proxy/YmIaMVSVQRnQnayemD95NKqbF_LP1AuAdfjFzcYMjHne4PRjv677giKSZOs2eqCsxvGbXtlM1af4VxpZ-cNObOgcMkt_ylcICgXfc6n7N-pQCYOnXF50stpL"
+          alt="Visión"
+          className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="p-6 text-center flex flex-col flex-1">
+          <h3 className="text-2xl font-semibold text-primary mb-2">Visión</h3>
+          <p className="text-sm text-muted-foreground text-justify flex-1">
+            Ser una cooperativa líder en el desarrollo integral de las mujeres campesinas,
+            mediante una economía sustentable desde la cooperativa, comunidad y familia,
+            fortaleciendo los procesos sociales y económicos, y promoviendo la defensa
+            de sus derechos humanos y medios de vida.
           </p>
-       
-          
+        </div>
+      </div>
+
+      {/* Principios */}
+      <div className="group rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full flex flex-col">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLhW9Xs-nlR3N97EQwUPKnjUvWVx88L5sQwQ&s"
+          alt="Principios"
+          className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="p-6 text-center flex flex-col flex-1">
+          <h3 className="text-2xl font-semibold text-primary mb-2">Principios</h3>
+          <ul className="text-sm text-muted-foreground text-left list-disc list-inside space-y-1 flex-1">
+            <li>Libre ingreso y retiro voluntario.</li>
+            <li>Voluntariedad solidaria y compromiso mutuo.</li>
+            <li>Control democrático.</li>
+            <li>Equidad.</li>
+            <li>Respeto y defensa de la autonomía.</li>
+            <li>Educación cooperativa.</li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-
-        </section>
-
-
-
-
-{/************************************************************ */}
+     
+      
+          </div>
+          </div>
+       </section>
 
         {/* Sección Productos */}
         <section id="productos" className="py-12 md:py-24 relative overflow-hidden">
@@ -596,65 +620,72 @@ export default function LandingPage() {
         </section>
 
         {/* Sección Testimonios */}
-        <section id="testimonios" className="bg-muted/50 py-12 md:py-24">
-          <div className="container space-y-12">
-            <div className="space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Voces que Florecen: Testimonios desde la Cooperativa
-              </h2>
-              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Ellas nos cuentan cómo, unidas en la cooperativa, han hecho florecer no solo la tierra, sino también sus vidas.
-              </p>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {/* Testimonio 1 */}
-         <div className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
-  <img 
-    src="/foto/1.webp" alt="Gisell Valle" 
-    className="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
-  />
-  <div className="absolute inset-0 flex items-end justify-center text-white p-6">
-    <div className="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-      <h2 className="text-xl font-semibold mb-2">Quidian Valle</h2>
-      <p className="text-center text-sm">Cada flor de rosa de Jamaica que cosechamos representa nuestro esfuerzo y esperanza.</p>
+        <section id="testimonios" className="bg-background py-12 md:py-24 transition-colors duration-300">
+  <div className="container space-y-12">
+    <div className="space-y-4 text-center">
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
+        Voces que Florecen: Testimonios desde la Cooperativa
+      </h2>
+      <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+        Ellas nos cuentan cómo, unidas en la cooperativa, han hecho florecer no solo la tierra, sino también sus vidas.
+      </p>
     </div>
-  </div>
-</div>
-
-              {/* Testimonio 2 */}
- <div className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
-  <img 
-    src="/foto/1.webp" alt="Susana Rivas" 
-    className="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
-  />
-  <div className="absolute inset-0 flex items-end justify-center text-white p-6">
-    <div className="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-      <h2 className="text-xl font-semibold mb-2">Susana Rivas</h2>
-      <p className="text-center text-sm">Antes trabajaba la tierra sola pero con el apoyo de la cooperativa, he aprendido a cuidar mejor mis cultivos.</p>
-    </div>
-  </div>
-</div>
-
-              {/* Testimonio 3 */}
-           <div className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
-  <img 
-    src="/foto/1.webp" 
-    alt="Gisell Valle" 
-    className="w-full h-64 object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0" 
-  />
-  <div className="absolute inset-0 flex items-end justify-center text-white p-6">
-    <div className="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-      <h2 className="text-xl font-semibold mb-2">Gisell Valle</h2>
-      <p className="text-center text-sm">Ser apicultora me enseñó a respetar la naturaleza y a trabajar en equipo, justas construimos un futuro mejor para nuestras familias.</p>
-    </div>
-  </div>
-</div>
-
-            </div>
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {/* Testimonio 1 */}
+      <div className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
+        <img
+          src="/foto/recurso_quidian.webp"
+          alt="Quidian Valle"
+          className="w-full h-[316px] object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0"
+        />
+        <div className="absolute inset-0 flex items-end justify-center text-white p-6">
+          <div className="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+            <h2 className="text-xl font-semibold mb-2">Quidian Valle</h2>
+            <p className="text-justify text-sm">
+              Cada flor de rosa de Jamaica que cosechamos representa nuestro esfuerzo y esperanza.
+            </p>
           </div>
+        </div>
+      </div>
+
+      {/* Testimonio 2 */}
+      <div className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
+        <img
+          src="/foto/recurso_susana.webp"
+          alt="Susana Rivas"
+          className="w-full h-[316px] object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0"
+        />
+        <div className="absolute inset-0 flex items-end justify-center text-white p-6">
+          <div className="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+            <h2 className="text-xl font-semibold mb-2">Susana Rivas</h2>
+            <p className="text-justify text-sm">
+              Antes trabajaba la tierra sola pero con el apoyo de la cooperativa, he aprendido a cuidar mejor mis cultivos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonio 3 */}
+      <div className="relative group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transform transition-transform duration-300 hover:scale-105 bg-white mt-8">
+        <img
+          src="/foto/recurso_gisell.webp"
+          alt="Gisell Valle"
+          className="w-full h-[316px] object-cover transition-all duration-500 filter brightness-75 blur-[2px] group-hover:brightness-100 group-hover:blur-0"
+        />
+        <div className="absolute inset-0 flex items-end justify-center text-white p-6">
+          <div className="bg-black bg-opacity-50 p-4 rounded-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+            <h2 className="text-xl font-semibold mb-2">Gisell Valle</h2>
+            <p className="text-center text-sm">
+              Ser apicultora me enseñó a respetar la naturaleza y a trabajar en equipo, justas construimos un futuro mejor para nuestras familias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
         </section>
 
-        {/* Nueva Sección de Certificaciones y Exportaciones */}
+        {/* Sección de Certificaciones y Exportaciones */}
         <section id="certificaciones" className="py-12 md:py-24 relative overflow-hidden">
           <div className="absolute -left-20 top-1/3 w-[350px] h-[350px] rounded-full bg-primary/10 blur-3xl opacity-40 -z-10"></div>
           <div className="absolute right-0 bottom-0 w-[250px] h-[250px] rounded-full bg-secondary/10 blur-3xl opacity-50 -z-10"></div>
@@ -906,9 +937,26 @@ export default function LandingPage() {
         srcWebm="/video/Produccion_miel.webm"
         poster = "/foto/poster_rosa_jamaica.webp"
       />
+      {/* Sección Mapa */}
+       <section id="mapa" className="py-12 md:py-24 bg-background transition-colors duration-300">
+  <div className="container space-y-12">
+    <div className="space-y-4 text-center">
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
+        Aquí florece la esperanza que cultivamos
+      </h2>
+      <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+        Acércate y sé testigo de una comunidad unida por el trabajo, la pasión por la tierra y el sueño de un futuro mejor para todos.
+        
+      </p>
+    </div>
+    <div>
+      <MapaCooperativa />
+    </div>
+  </div>
+       </section>
 
         {/* Sección Contacto */}
-        <section id="contacto" className="py-12 md:py-24">
+        <section id="contacto" className="py-12 md:py-24 ">
           <div className="container grid gap-6 md:grid-cols-2 md:gap-12">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Contáctanos</h2>
@@ -918,7 +966,7 @@ export default function LandingPage() {
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>Comunidad Jocote, Condega</span>
+                  <span>Comunidad Jocote Arriba, Condega</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg
@@ -957,6 +1005,8 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="flex gap-4">
+                {/* Icono de Facebook */}
+
                 <Button variant="outline" size="icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -974,6 +1024,8 @@ export default function LandingPage() {
                   </svg>
                   <span className="sr-only">Facebook</span>
                 </Button>
+
+                {/* Icono de Instagram */}
                 <Button variant="outline" size="icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -993,103 +1045,65 @@ export default function LandingPage() {
                   </svg>
                   <span className="sr-only">Instagram</span>
                 </Button>
-                <Button variant="outline" size="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5"
-                  >
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                  </svg>
-                  <span className="sr-only">Twitter</span>
+                
+                  {/* Icono de TikTok */}
+               <Button variant="outline" size="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 256 256"
+                  className="h-5 w-5 fill-current"
+                >
+                 <path d="M168 32a48 48 0 0 0 48 48V64a64 64 0 0 1-41.4-15.4A64 64 0 0 1 152 16h-24v144a32 32 0 1 1-32-32 31.2 31.2 0 0 1 8 .9V96.5a64 64 0 1 0 40 60V96.6a88.2 88.2 0 0 0 40 9.4V80a48 48 0 0 1-16-3.1V32Z" />
+                </svg>
+                 <span className="sr-only">TikTok</span>
                 </Button>
-              </div>
+             </div>
             </div>
-            <div className="rounded-lg border bg-background p-6">
-              <h3 className="mb-4 text-lg font-bold">Envíanos un mensaje</h3>
-              <form className="space-y-4">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="name"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Nombre
-                    </label>
-                    <input
-                      id="name"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Tu nombre"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label
-                      htmlFor="email"
-                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="tu@email.com"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="subject"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Asunto
-                  </label>
-                  <input
-                    id="subject"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Asunto del mensaje"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="message"
-                    className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                  >
-                    Mensaje
-                  </label>
-                  <textarea
-                    id="message"
-                    className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="Tu mensaje"
-                  ></textarea>
-                </div>
-                <Button className="w-full">
-                  <MessageSquare className="mr-2 h-4 w-4" />
-                  Enviar mensaje
+          </div>
+          <div className="container flex flex-col items-center gap-4 py-12 text-center md:py-24 relative z-10">
+            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              {/* Botón de WhatsApp con ícono y texto */}
+                  <a
+                   href="https://wa.me/50576034405?text=Hola,%20quiero%20más%20información%20sobre%20sus%20productos"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="inline-block">
+               <Button variant="outline" className="flex items-center gap-2 bg-[#25D366] text-white hover:bg-[#1DA851]">
+                <svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 fill="currentColor"
+                 className="h-5 w-5"
+                >
+                 <path d="M16.472 13.811c-.297-.149-1.758-.867-2.031-.967-.273-.1-.472-.148-.67.15-.198.297-.767.967-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.612-.916-2.206-.242-.582-.487-.504-.67-.513l-.571-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.48 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.08 4.487.71.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.288.173-1.41-.074-.123-.272-.198-.57-.347m-4.421 6.144h-.001a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.24c.001-5.45 4.436-9.884 9.888-9.884a9.84 9.84 0 0 1 6.993 2.9 9.823 9.823 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.888 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05.003C5.495 0 .003 5.49 0 12.244c0 2.157.564 4.26 1.637 6.105L.057 24l5.746-1.505a11.98 11.98 0 0 0 5.655 1.437h.005c6.553 0 11.868-5.336 11.871-11.888a11.82 11.82 0 0 0-3.484-8.441" />
+                </svg>
+                 Chatear por WhatsApp
                 </Button>
-              </form>
+                 </a>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => {
+                  document.getElementById("inicio")?.scrollIntoView({ behavior: "smooth" })
+                }}
+              >
+                Volver al inicio
+              </Button>
             </div>
           </div>
         </section>
-      </main>
+    </main>
 
       {/* Pie de página */}
       <footer className="border-t bg-muted/50">
         <div className="container flex flex-col gap-6 py-8 md:flex-row md:items-center md:justify-between md:py-12">
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
-              <Leaf className="h-6 w-6 text-primary" />
+              <img src="/foto/logo_continue.ico" alt="Icono COMTINUE" className="h-6 w-6 rounded-lg" />
               <span className="text-2xl font-bold text-primary">CM</span>
               <span className="text-2xl font-bold">Tierra Nuestra</span>
             </div>
-            <p className="text-sm text-muted-foreground">© 2023 CM TierraNuestra. Todos los derechos reservados.</p>
+            <p className="text-sm text-muted-foreground">© 2025 CM TierraNuestra. Todos los derechos reservados.</p>
           </div>
           <nav className="flex flex-wrap gap-4 md:gap-6">
             <a href="#inicio" className="text-sm font-medium hover:text-primary transition-colors">
@@ -1109,6 +1123,9 @@ export default function LandingPage() {
             </a>
             <a href="#mision-vision-valores" className="text-sm font-medium hover:text-primary transition-colors">
               Misión & Visión
+            </a>
+            <a href="#mapa" className="text-sm font-medium hover:text-primary transition-colors">
+              Mapa
             </a>
             <a href="#contacto" className="text-sm font-medium hover:text-primary transition-colors">
               Contacto
