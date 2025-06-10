@@ -50,7 +50,7 @@ export default function MapaCooperativa() {
   }, []);
 
   return (
-    <div className="relative w-full h-[650px] mt-8 rounded-xl overflow-hidden shadow-md border border-gray-200">
+    <div>
       <div
         id="map"
         className="absolute inset-0 z-0"

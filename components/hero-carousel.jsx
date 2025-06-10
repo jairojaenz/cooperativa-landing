@@ -7,33 +7,38 @@ import { cn } from "@/lib/utils"
 
 //importar imagenes de la carpeta src/images
 
-import produccion_jamaica from "@/src/images/Produccion_jamaica.webp"
-import apicultores from "@/src/images/Apicultores.webp"
-import GrupoApicultores from "@/src/images/GrupoApicultores.webp"
-import Produccion_miel from "@/src/images/Produccion_miel.webp"
-import Jamaica from "@/src/images/Jamaica.webp"
-import Fruto_Cafe from "@/src/images/Fruto_cafe.webp"
-import procesando_jamaica from "@/src/images/Procesando_jamaica.webp"
-
+import cafe from "@/src/images/Cafe.webp"//Esta
+import cafe_mujeres from "@/src/images/CafeMujeres.webp"//Esta
+import apicultores from "@/src/images/Apicultores.webp"//Esta
+import grupo_apicultores from "@/src/images/GrupoApicultores.webp"//Esta
+import produccion_miel from "@/src/images/ProduccionMiel.webp"//Esta
+import Jamaica from "@/src/images/Jamaica.webp"//Esta
+import mujeres_jamaica from "@/src/images/MujeresJamaica.webp"//Esta
+import mujeres_capecinas from "@/src/images/MujeresCampecinas.webp"//Esta
+import mujeres_trabajando from "@/src/images/MujeresTrabajando.webp"//Esta
+import productos from "@/src/images/Productos.webp"//Esta
 
 const images = [
   {
     //add image src of folder src/images of root the project and alt text
 
-    src: produccion_jamaica,
-    alt: "Producción de jamaica",
+    src: cafe,
+    alt: "Plata de cafe",
+  },
+  {
+    src: cafe_mujeres,
+    alt: "Mujeres cafetaleras en el campo",
   },
   {
     src: apicultores,
     alt: "Mujeres apicultoras en el campo",
-    alt: "Productos orgánicos de la cooperativa",
   },
   {
-    src: GrupoApicultores,
+    src: grupo_apicultores,
     alt: "Grupo de apicultores",
   },
   {
-    src: Produccion_miel,
+    src: produccion_miel,
     alt: "Producción de miel",
   },
   {
@@ -41,13 +46,21 @@ const images = [
     alt: "Producción de jamaica",
   },
   {
-    src: Fruto_Cafe,
-    alt: "Fruto de café",
+    src: mujeres_jamaica,
+    alt: "Mujeres cultivando jamaica",
   },
   {
-    src: procesando_jamaica,
-    alt: "Procesando jamaica",
+    src: mujeres_capecinas,
+    alt: "Mujeres campecinas",
   },
+  {
+    src: mujeres_trabajando,
+    alt: "Mujeres Trabajando",
+  },
+  {
+    src: productos,
+    alt: "Productos de la cooperativa",
+  }
 ]
 
 export default function HeroCarousel() {

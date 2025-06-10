@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button"
 import HeroCarousel from "@/components/hero-carousel"
 import { ThemeSwitch } from "@/components/theme-switch"
 import { ProductDetailModal, ProductDetails } from "@/components/product-detail-modal"
-import Socias_cooperativa from "@/src/images/Socias_cooperativa.webp"
+import Socias_cooperativa from "@/src/images/SociasCooperativa.webp"
 // Datos de productos
 const products = [
   {
@@ -125,67 +125,68 @@ const products = [
     ],
   },
   {
-    id: "cacao",
-    name: "Cacao",
-    description:
-      "Cacao cultivado con prácticas sostenibles. Nuestro cacao es fermentado y secado con métodos tradicionales para desarrollar su sabor complejo y aromático.",
-    price: "C$30/kg",
-    availability: "Todo el año",
-    image: "https://www.faborit.com/wp-content/uploads/2020/07/blog-cacao-chocolate-planta.jpg",
-    provider: {
-      name: "Elena Flores",
-      location: "Comunidad El Coyolito, Condega",
-      experience: "10 años en cultivo y procesamiento de cacao",
-    },
-    benefits: [
-      "Rico en antioxidantes y minerales",
-      "Cultivado bajo sistemas agroforestales",
-      "Contribuye a la conservación de bosques",
-      "Procesado artesanalmente",
-      "Ideal para la elaboración de chocolate y otros productos derivados",
-    ],
+  id: "sorgo",
+  name: "Sorgo",
+  description:
+    "Sorgo cultivado en tierras fértiles del norte del país, utilizando métodos tradicionales que garantizan su calidad nutricional. Es una excelente alternativa como cereal y forraje.",
+  price: "C$18/kg",
+  availability: "Época de cosecha: noviembre a febrero",
+  image: "https://www.mulinomarello.com/cdn/shop/articles/sorgo_1024x1024.jpg?v=1623754874",
+  provider: {
+    name: "Carlos Hernández",
+    location: "Comunidad San Rafael, Estelí",
+    experience: "15 años en producción de granos básicos, especializado en sorgo",
+  },
+  benefits: [
+    "Alto contenido en fibra y antioxidantes",
+    "Apto para personas con intolerancia al gluten",
+    "Requiere poca agua, ideal para zonas semiáridas",
+    "Utilizado en la alimentación humana y animal",
+    "Base para harinas, cereales y bebidas tradicionales",
+  ],
+
   },
   {
-    id: "chiltoma",
-    name: "Chiltoma",
-    description:
-      "Chiltomas frescas cultivadas en huertos de patio. Nuestras chiltomas son cultivadas con técnicas orgánicas que garantizan su sabor y frescura.",
-    price: "C$40/kg",
-    availability: "Según temporada",
-    image: "https://inta.gob.ni/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-01-at-12.53.51-PM.jpeg",
-    provider: {
-      name: "Rosa Mendoza",
-      location: "Comunidad Venecia, Condega",
-      experience: "7 años en agricultura urbana y periurbana",
-    },
-    benefits: [
-      "Alto contenido de vitamina C y antioxidantes",
-      "Cultivadas sin pesticidas químicos",
-      "Cosechadas en su punto óptimo de madurez",
-      "Contribuye a la economía familiar",
-      "Frescas y con mejor sabor que las convencionales",
-    ],
+  id: "pepino",
+  name: "Pepino",
+  description:
+    "Pepinos frescos, crujientes y cultivados con métodos agroecológicos. Son ideales para ensaladas, jugos y consumo fresco.",
+  price: "C$20/kg",
+  availability: "Todo el año",
+  image: "",
+  provider: {
+    name: "María López",
+    location: "Comunidad La Laguna, Condega",
+    experience: "9 años en producción agroecológica de hortalizas",
+  },
+  benefits: [
+    "Alto contenido de agua y minerales",
+    "Refrescante y bajo en calorías",
+    "Ayuda a la hidratación del cuerpo",
+    "Cultivado sin agroquímicos",
+    "Ideal para dietas y alimentación saludable",
+  ],
   },
   {
-    id: "tomates-organicos",
-    name: "Tomates Orgánicos",
-    description:
-      "Tomates cultivados sin pesticidas en huertos familiares. Nuestros tomates son variedades locales con un sabor intenso y dulce.",
-    price: "C$45/kg",
-    availability: "Todo el año",
-    image: "https://sembralia.com/cdn/shop/articles/tomate.jpg?v=1648560931",
-    provider: {
-      name: "Sofía Gómez",
-      location: "Comunidad Los Cerritos, Condega",
-      experience: "9 años en producción orgánica de hortalizas",
-    },
-    benefits: [
-      "Rico en licopeno y antioxidantes",
-      "Cultivado con abonos orgánicos",
-      "Sin residuos de pesticidas",
-      "Variedades locales con mejor sabor",
-      "Cosechados en su punto óptimo de madurez",
-    ],
+  id: "ayote",
+  name: "Ayote",
+  description:
+    "Ayotes cultivados de forma tradicional, ideales para sopas, purés y postres típicos. Producidos con prácticas sostenibles que respetan el ciclo natural de cultivo.",
+  price: "C$25/kg",
+  availability: "Agosto a diciembre",
+  image: "https://www.costafresh.co.cr/wp-content/uploads/2015/01/ayote-tierno.jpg",
+  provider: {
+    name: "José Gutiérrez",
+    location: "Comunidad Los Llanos, Estelí",
+    experience: "12 años en producción de hortalizas y cucurbitáceas",
+  },
+  benefits: [
+    "Rico en vitaminas A y C",
+    "Bajo en calorías, ideal para dietas saludables",
+    "Favorece la digestión y el sistema inmunológico",
+    "Aporta fibra y antioxidantes",
+    "Versátil en la cocina tradicional nicaragüense",
+  ],
   },
   {
     id: "cebolla",
@@ -949,7 +950,7 @@ export default function LandingPage() {
         
       </p>
     </div>
-    <div>
+    <div className="relative w-full h-[650px] mt-8 rounded-xl overflow-hidden shadow-md border border-gray-200">
       <MapaCooperativa />
     </div>
   </div>
