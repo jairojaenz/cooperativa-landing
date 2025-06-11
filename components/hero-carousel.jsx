@@ -110,21 +110,25 @@ export default function HeroCarousel() {
      
       {/* Carousel images */}
       <div className="relative h-full w-full">
-     <div className="absolute top-2/4 left-2/4 flex-col gap-4 z-10 w-full flex justify-center px-6 text-center transform -translate-x-2/4 -translate-y-2/4">
-
-     <h1
-  className="text-4xl font-bold tracking-tighter lg:text-6xl"
-  style={{ textShadow: "12 16px 42px rgba(0,0,0,0.9)" }}
->
-  Productos del campo <span className="text-primary"
-  >cultivados por mujeres</span>
-      </h1>
-               <h2 className="text-shadow-lg/30 text-lg font-bold"
-               style={{ textShadow: "12 8px 32px rgba(0,0,0,0.9)" }}>
-                Apoya a nuestra cooperativa de mujeres trabajadoras del campo y disfruta de productos orgánicos, frescos
-                y de alta calidad.
-              </h2>
+         <div className="absolute top-2/4 left-2/4 flex-col gap-4 z-10 w-full flex justify-center px-6 text-center transform -translate-x-2/4 -translate-y-2/4">
+      <div className="inline-block w-full max-w-7xl mx-auto bg-black/50 rounded-xl p-6 backdrop-blur-sm">
+        <h1
+          className="text-4xl font-bold tracking-tighter lg:text-6xl text-gray-300"
+          style={{
+            textShadow: "0 8px 32px rgba(0,0,0,0.9)"
+          }}
+        >
+          Productos del campo <span className="text-primary">cultivados por mujeres</span>
+        </h1>
+        <h2
+          className="text-shadow-lg/30 text-lg font-bold mt-4 text-gray-300"
+          style={{ textShadow: "0 4px 16px rgba(0,0,0,0.7)" }}
+        >
+          Apoya a nuestra cooperativa de mujeres trabajadoras del campo y disfruta de productos orgánicos, frescos
+          y de alta calidad.
+        </h2>
       </div>
+    </div>
         {images.map((image, index) => (
           <div
             key={index}
