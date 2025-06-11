@@ -24,7 +24,7 @@ const products = [
       "Hierbas frescas para cocina y remedios naturales. La rosa de jamaica es conocida por su sabor único y propiedades medicinales.",
     price: "C$25/Vaso",
     availability: "Según temporada",
-    image: "https://www.prensalibre.com/wp-content/uploads/2020/07/ACE-ROSA-DE-JAMAICA-1.jpg?quality=52",
+    image: "/foto/Jamaica.webp",
     provider: {
       name: "María Rodríguez",
       location: "Comunidad El Jocote, Condega",
@@ -45,8 +45,7 @@ const products = [
       "Miel pura de abeja producida de manera sostenible. Nuestras abejas polinizan cultivos orgánicos, lo que resulta en una miel de alta calidad con sabor excepcional.",
     price: "C$60/Litro",
     availability: "Todo el año",
-    image:
-      "https://okdiario.com/img/2022/10/04/esta-es-la-diferencia-que-deberias-saber-entre-la-miel-de-abeja-y-la-miel-de-flores.jpg",
+    image:"/foto/Miel.webp",
     provider: {
       name: "Juana Pérez",
       location: "Comunidad Las Segovias, Condega",
@@ -67,7 +66,7 @@ const products = [
       "Café de altura cultivado bajo sombra por nuestras productoras. Nuestro café se cultiva entre 1,200 y 1,500 metros sobre el nivel del mar, lo que le da un sabor excepcional y notas únicas.",
     price: "C$80/Paquete",
     availability: "Según temporada",
-    image: "https://www.vostv.com.ni/media/news/84976cc45f2b11efa46f567103a612d1.jpeg",
+    image: "/foto/Cafe.webp",
     provider: {
       name: "Carmen Gutiérrez",
       location: "Comunidad San Juan, Condega",
@@ -88,8 +87,7 @@ const products = [
       "Frijoles rojos cultivados de manera tradicional. Nuestros frijoles son seleccionados a mano para garantizar la mejor calidad y sabor en cada grano.",
     price: "C$35/kg",
     availability: "Todo el año",
-    image:
-      "https://media.istockphoto.com/id/541972824/es/foto/frijol-rojo-en-utensilios-de-cocina-rurales.jpg?s=612x612&w=0&k=20&c=X7XT6OnB2lRbjAzb2qNSGqm6NWEvoMWxbf-4fNE2Bi8=",
+    image:"/foto/Frijol.webp",
     provider: {
       name: "Luisa Martínez",
       location: "Comunidad El Bramadero, Condega",
@@ -110,7 +108,7 @@ const products = [
       "Maíz criollo para tortillas y otros platillos tradicionales. Nuestro maíz conserva las variedades ancestrales que han sido cultivadas por generaciones.",
     price: "C$20/kg",
     availability: "Según temporada",
-    image: "https://blog.cambiagro.com/wp-content/uploads/2024/12/pexels-franco30-3973024-1024x682.jpg",
+    image: "/foto/Maiz.webp",
     provider: {
       name: "Ana Sánchez",
       location: "Comunidad Santa Teresa, Condega",
@@ -131,7 +129,7 @@ const products = [
     "Sorgo cultivado en tierras fértiles del norte del país, utilizando métodos tradicionales que garantizan su calidad nutricional. Es una excelente alternativa como cereal y forraje.",
   price: "C$18/kg",
   availability: "Época de cosecha: noviembre a febrero",
-  image: "https://www.mulinomarello.com/cdn/shop/articles/sorgo_1024x1024.jpg?v=1623754874",
+  image: "/foto/Sorgo.webp",
   provider: {
     name: "Carlos Hernández",
     location: "Comunidad San Rafael, Estelí",
@@ -153,7 +151,7 @@ const products = [
     "Pepinos frescos, crujientes y cultivados con métodos agroecológicos. Son ideales para ensaladas, jugos y consumo fresco.",
   price: "C$20/kg",
   availability: "Todo el año",
-  image: "",
+  image: "/foto/Pepino.webp",
   provider: {
     name: "María López",
     location: "Comunidad La Laguna, Condega",
@@ -174,7 +172,7 @@ const products = [
     "Ayotes cultivados de forma tradicional, ideales para sopas, purés y postres típicos. Producidos con prácticas sostenibles que respetan el ciclo natural de cultivo.",
   price: "C$25/kg",
   availability: "Agosto a diciembre",
-  image: "https://www.costafresh.co.cr/wp-content/uploads/2015/01/ayote-tierno.jpg",
+  image: "/foto/Ayote.webp",
   provider: {
     name: "José Gutiérrez",
     location: "Comunidad Los Llanos, Estelí",
@@ -195,7 +193,7 @@ const products = [
       "Cebollas frescas cultivadas en huertos familiares. Nuestras cebollas son conocidas por su sabor intenso y propiedades medicinales.",
     price: "C$35/kg",
     availability: "Según temporada",
-    image: "https://www.editorialderiego.com/wp-content/uploads/2024/02/Cebolla_02.jpg",
+    image: "/foto/Cebolla.webp",
     provider: {
       name: "Teresa Jiménez",
       location: "Comunidad San Diego, Condega",
@@ -271,7 +269,7 @@ export default function LandingPage() {
             <a href="#certificaciones" className="text-sm font-medium hover:text-primary transition-colors">
               Certificaciones
             </a>
-            <a href="#mision-vision-valores" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="#mision-vision-principios" className="text-sm font-medium hover:text-primary transition-colors">
               Misión & Visión
             </a>
             <a href="#mapa" className="text-sm font-medium hover:text-primary transition-colors">
@@ -410,7 +408,7 @@ export default function LandingPage() {
 
 
        {/* Sección Misión, Visión y Valores */}
-       <section id="mision-vision-valores" className="relative overflow-hidden container:py-12 md:py-24 lg:py-32">
+       <section id="mision-vision-principios" className="relative overflow-hidden container:py-12 md:py-24 lg:py-32">
 
           {/* Elementos decorativos de fondo */}
           <div className="absolute -top-80 -left-32 w-[600px] h-[600px] rounded-full bg-primary/90 blur-xl opacity-20 -z-10 animate-move-diagonal"></div>
@@ -433,7 +431,7 @@ export default function LandingPage() {
       {/* Misión */}
       <div className="group rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full flex flex-col">
         <img
-          src="https://www.ienh.edu.co/wp-content/uploads/2023/04/MISION-PISANDO-FIRME.png"
+          src="/foto/Mision.webp"
           alt="Misión"
           className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
         />
@@ -451,7 +449,7 @@ export default function LandingPage() {
       {/* Visión */}
       <div className="group rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full flex flex-col">
         <img
-          src="https://lh5.googleusercontent.com/proxy/YmIaMVSVQRnQnayemD95NKqbF_LP1AuAdfjFzcYMjHne4PRjv677giKSZOs2eqCsxvGbXtlM1af4VxpZ-cNObOgcMkt_ylcICgXfc6n7N-pQCYOnXF50stpL"
+          src="/foto/Vision.webp"
           alt="Visión"
           className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
         />
@@ -469,7 +467,7 @@ export default function LandingPage() {
       {/* Principios */}
       <div className="group rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full flex flex-col">
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLhW9Xs-nlR3N97EQwUPKnjUvWVx88L5sQwQ&s"
+          src="/foto/Principios.webp"
           alt="Principios"
           className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
         />
@@ -1002,7 +1000,7 @@ export default function LandingPage() {
                     <rect width="20" height="16" x="2" y="4" rx="2" />
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
-                  <span>info@cmtierranuestra.com</span>
+                  <span>comtinuerl@gmail.com</span>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -1122,7 +1120,7 @@ export default function LandingPage() {
             <a href="#certificaciones" className="text-sm font-medium hover:text-primary transition-colors">
               Certificaciones
             </a>
-            <a href="#mision-vision-valores" className="text-sm font-medium hover:text-primary transition-colors">
+            <a href="#mision-vision-principios" className="text-sm font-medium hover:text-primary transition-colors">
               Misión & Visión
             </a>
             <a href="#mapa" className="text-sm font-medium hover:text-primary transition-colors">
